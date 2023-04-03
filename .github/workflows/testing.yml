@@ -60,6 +60,6 @@ jobs:
           reporter: jest-junit        # Format of test results
           # Personal access token used to interact with Github API
           # Default: ${{ github.token }}
-          token: '${{ secrets.GITHUB_TOKEN }}'
+          # token: '${{ secrets.GITHUB_TOKEN }}'
           
           
