@@ -51,12 +51,12 @@ jobs:
           path: coverage/
 
       - name: Test Report
-        uses: dorny/test-reporter@v1.6.0
+        uses: dorny/test-reporter@v1
         #if: github.repository == 'octo-org/octo-repo-prod'
         if: success() || failure()    # run this step even if previous step failed
         with:
           name: JEST Tests            # Name of the check run which will be created
-          path: jest-junit.xml   # Path to test results
+          path: reports/jest-junit.xml   # Path to test results
           reporter: jest-junit        # Format of test results
           # Personal access token used to interact with Github API
           # Default: ${{ github.token }}
